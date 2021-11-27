@@ -150,3 +150,18 @@ CREATE TABLE SituacaoVeiculo (
 
 ## Star Model
 ![Modelo Estrela](Star_model.png)
+
+## Perguntas de negócio
+Qual o dia da semana em que há mais locações?  
+Tipo de veículo mais locado por dia da semana.  
+Quantidade de locação de cada item opcional para um determinado período de tempo.  
+Quais itens opcionais são mais locados por tipo de carro?  
+Qual a média de idade do cliente por modelo de carro?  
+Quantidade de clientes, por estado civil, que locam carros durante o fim de semana?  
+Há um aumento de locações durante o natal?  
+Qual a média de gasto em locação por idade?  
+Qual a média de gasto com itens opcionais por idade?  
+Qual a média de gasto com locação por estado civil?  
+Quantidade de clientes por UF (estado onde reside) em um determinado mês.  
+Quanto cada funcionário vendeu (considerando aluguel de opcionais e veículo) para um
+período informado?  
