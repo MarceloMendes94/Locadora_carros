@@ -118,10 +118,7 @@ CREATE TABLE SituacaoVeiculo (
     CdSituacao INTEGER PRIMARY KEY,
     DesSituacao VARCHAR(20)
 );
- 
-ALTER TABLE TipoCombustivel ADD CONSTRAINT FK_TipoCombustivel_3
-    FOREIGN KEY (DesCombustivel)
-    REFERENCES Veiculo (CdVeiculo);
+
  
 ALTER TABLE Veiculo ADD CONSTRAINT FK_Veiculo_3
     FOREIGN KEY (Frabricante_CdFabricante)
