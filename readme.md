@@ -144,12 +144,14 @@ CREATE TABLE SituacaoVeiculo (
 ![Fast Immersion Canvas](./LocadoraFIC.png)
 
 ### Fast Modelling Canvas
-![]()
-
-## PDI Transforms
+![Fast Modelling Canvas](./LocadoraFMC.png)
 
 ## Star Model
 ![Modelo Estrela](Star_model.png)
+
+## Transformações no Pentaho
+
+
 
 ## Perguntas de negócio
 Qual o dia da semana em que há mais locações?  
