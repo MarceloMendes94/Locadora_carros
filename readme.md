@@ -154,8 +154,22 @@ CREATE TABLE SituacaoVeiculo (
 ![Modelo Estrela](Star_model.png)
 
 ## Transformações no Pentaho
+### Dimensão Cliente  
+![Dimensão cliente](./pentaho/img/dim_cliente.png)
 
+### Dimensão Funcionario
+![Dimensão funcionario](./pentaho/img/dim_funcionario.png)
 
+### Dimensão Veiculo
+![Dimensão Veiculo](pentaho/img/dim_veiculo.png)
+
+### Dimensão Data
+![Dimensão Data](pentaho/img/dim_data.png)
+### Dimensão itemOpcional
+![]()
+
+### Tabela Fato
+![Tabela Fato](pentaho/img/tabela_fato.png)
 
 ## Perguntas de negócio
 Qual o dia da semana em que há mais locações?  
