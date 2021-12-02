@@ -1,11 +1,11 @@
-# Trabalho de inteligencai de negócios
+# Trabalho de inteligência de negócios
 
 [Especificações](./IN-Primeirotrabalho.pdf)  
 Alunos: 
 1. Anne Caroline  
 2. Marcelo P. Mendes 
 ## Trabalho
-Consiste em elaborar um data mart para uma locadora de veículos fictica, construir um banco apartir de um modelo lógico que no contexto servirá de OLTP, Construir uma modelagem dimensional em estrela respeitando a ordem aprensentada pelo Kimball.
+Consiste em elaborar um data mart para uma locadora de veículos fictícia, construir um banco apartir de um modelo lógico que no contexto servirá de OLTP, Construir uma modelagem dimensional em estrela respeitando a ordem aprensentada pelo Kimball.
 ### 1. Modelagem
 1. Definir a granularidade;
 2. Identificar as dimensões;
@@ -153,6 +153,70 @@ CREATE TABLE SituacaoVeiculo (
 ## Star Model
 ![Modelo Estrela](Star_model.png)
 
+### Modelo Estrela físico  
+  
+```
+CREATE TABLE fato (
+    pk INTEGER PRIMARY KEY,
+    dim_cliente INTEGER,
+    dim_funcionario INTEGER,
+    dim_veiculo INTEGER,
+    dim_item_opl INTEGER,
+    KmInicial INTEGER,
+    KmFinal INTEGER,
+    VlrDiaria DECIMAL(10,2),
+    DtInicio INTEGER,
+    DtFim INTEGER
+);
+
+CREATE TABLE dim_data (
+    pk INTEGER PRIMARY KEY,
+    data_completa DATE,
+    dia_semana INTEGER,
+    dia_mes INTEGER,
+    dia_semana_escrito VARCHAR(20),
+    mes INTEGER,
+    mes_escrito VARCHAR(20),
+    ano INTEGER
+);
+
+CREATE TABLE dim_cliente (
+    pk INTEGER PRIMARY KEY,
+    NmCliente VARCHAR(50),
+    Cpf VARCHAR(11),
+    DtNascimento DATE,
+    EstadoCivil VARCHAR(20),
+    UF VARCHAR(45)
+);
+
+CREATE TABLE dim_funcionario (
+    pk INTEGER PRIMARY KEY,
+    NmFunc VARCHAR(50),
+    Matricula VARCHAR(35),
+    Cpf VARCHAR(11),
+    UF VARCHAR(45),
+    Cargo VARCHAR(40)
+);
+
+CREATE TABLE dim_veiculo (
+    pk INTEGER PRIMARY KEY,
+    Modelo VARCHAR(45),
+    Fabricante VARCHAR(45),
+    Placa VARCHAR(10),
+    Situacao VARCHAR(35),
+    Combustivel VARCHAR(30),
+    AnoFabricacao YEAR(4),
+    Chassi VARCHAR(20)
+);
+
+CREATE TABLE dim_item_op (
+    pk INTEGER PRIMARY KEY,
+    Item VARCHAR(45),
+    VlrDiaria DECIMAL(10,2)
+);
+```
+
+
 ## Transformações no Pentaho
 ### Dimensão Cliente  
 ![Dimensão cliente](./pentaho/img/dim_cliente.png)
@@ -161,16 +225,16 @@ CREATE TABLE SituacaoVeiculo (
 ![Dimensão funcionario](./pentaho/img/dim_funcionario.png)
 
 ### Dimensão Veiculo
-![Dimensão Veiculo](pentaho/img/dim_veiculo.png)
+![Dimensão Veiculo](./pentaho/img/dim_veiculo.png)
 
 ### Dimensão Data
-![Dimensão Data](pentaho/img/dim_data.png)
+![Dimensão Data](./pentaho/img/dim_data.png)
 
 ### Dimensão itemOpcional
-![]()
+![Dimensão item Opcional](./pentaho/img/dim_item_op.png)
 
 ### Tabela Fato
-![Tabela Fato](pentaho/img/tabela_fato.png)
+![Tabela Fato](./pentaho/img/tabela_fato.png)
 
 ## Perguntas de negócio
 Qual o dia da semana em que há mais locações?  

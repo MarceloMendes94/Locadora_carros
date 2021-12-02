@@ -60,7 +60,7 @@ CREATE TABLE dim_item_op (
 );
 
 ALTER TABLE fato ADD CONSTRAINT FK_fato_1
-    FOREIGN KEY (DtIncio)
+    FOREIGN KEY (DtInicio)
     REFERENCES dim_data (pk);
  
 ALTER TABLE fato ADD CONSTRAINT FK_fato_2
