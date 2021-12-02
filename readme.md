@@ -165,6 +165,7 @@ CREATE TABLE SituacaoVeiculo (
 
 ### Dimensão Data
 ![Dimensão Data](pentaho/img/dim_data.png)
+
 ### Dimensão itemOpcional
 ![]()
 
