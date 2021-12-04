@@ -141,8 +141,8 @@ CREATE TABLE SituacaoVeiculo (
 );
 ... 
 ```
-[Código completo do modelo Físico](./MODELO_FISICO.sql)  
-[Código com carga de dados](./insert.sql)
+[Código completo do modelo Físico](./locadora_fisico.sql)  
+
 ## Modelagem
 ### Fast Immersion Canvas
 ![Fast Immersion Canvas](./LocadoraFIC.png)
@@ -215,7 +215,7 @@ CREATE TABLE dim_item_op (
     VlrDiaria DECIMAL(10,2)
 );
 ```
-
+[Modelo estral Físico](./locadora_estrela_fisico.sql)
 
 ## Transformações no Pentaho
 ### Dimensão Cliente  
@@ -235,6 +235,10 @@ CREATE TABLE dim_item_op (
 
 ### Tabela Fato
 ![Tabela Fato](./pentaho/img/tabela_fato.png)
+
+
+[DUMP locadora](./DUMP_locadora.sql)  
+[DUMP do modelo Estrela](./DUMP_estrela_fisico.sql)
 
 ## Perguntas de negócio
 Qual o dia da semana em que há mais locações?  
