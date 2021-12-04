@@ -12,7 +12,7 @@ Consiste em elaborar um data mart para uma locadora de veículos fictícia, cons
 3. Identificar os fatos.
 
 ### 2. ETL
-Obrigatóriamente deve-se ter uma dimensão data fazendo uso od matérial disponibilizado no AVA
+Obrigatóriamente deve-se ter uma dimensão data fazendo uso do material disponibilizado no AVA
 
 
 ## Modelo lógico 

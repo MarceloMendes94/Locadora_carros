@@ -50,7 +50,8 @@ CREATE TABLE dim_veiculo (
     Situacao VARCHAR(35),
     Combustivel VARCHAR(30),
     AnoFabricacao YEAR(4),
-    Chassi VARCHAR(20)
+    Chassi VARCHAR(20),
+    Tipo VARCHAR(45)
 );
 
 CREATE TABLE dim_item_op (
