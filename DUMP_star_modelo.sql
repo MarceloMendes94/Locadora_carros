@@ -153,7 +153,7 @@ CREATE TABLE `dim_veiculo` (
 
 LOCK TABLES `dim_veiculo` WRITE;
 /*!40000 ALTER TABLE `dim_veiculo` DISABLE KEYS */;
-INSERT INTO `dim_veiculo` VALUES (1,'Hb20 1.2 hatch','Toyota','NAC-8873','Disponível','Gasolina',2009,'4CR 2kFBBB DT Nc0116','Sedã'),(2,'Onix Sedan','Chevrolet','HOO-5563','Em manutenção','Gasolina',1996,'14G BArSTu 6F aJ0832','Esportivo'),(3,'Hb20 1.2 hatch','Hyundai','JNK-0402','Disponível','Flex',2003,'4KA S08rHN 09 2S6401','Sedã'),(4,'Hb20 1.2 hatch turbo','Hyundai','MXD-1582','Locado','GNV',2002,'3Vu 18r4AL Ay f83029','Esportivo'),(5,'Fussion','Ford','MUI-5125','Locado','GNV',2010,'2Al WH92Z1 6h LW8250','Sedã'),(6,'Etios Sedan','Toyota','HXJ-0082','Desativado','Gasolina',1993,'6xh 3hl7s8 G1 YA4527','Sedã'),(7,'Classic 1.5','Chevrolet','MQR-7628','Disponível','Flex',2015,'2t4 Af7le6 AT HF6915','Sedã'),(8,'Honda civic 2016','Honda','MSQ-0916','Disponível','Gasolina',2020,'8YL jp1PrD a9 ZK1789','Esportivo'),(9,'Etios hatch','Toyota','MSD-0867','Locado','Gasolina',2003,'6kT s7yCAl Tr aA5114','Caminhonete'),(10,'Ká 1.0','Ford','MRP-7110','Locado','GNV',2018,'81C TYp3ak G5 5A2914','Sedã');
+INSERT INTO `dim_veiculo` VALUES (1,'Hb20 1.2 ','Toyota','NAC-8873','Disponível','Gasolina',2009,'4CR 2kFBBB DT Nc0116','Sedan'),(2,'Onix ','Chevrolet','HOO-5563','Em manutenção','Gasolina',2012,'14G BArSTu 6F aJ0832','Sedan'),(3,'Hb20 1.2 ','Hyundai','JNK-0402','Disponível','Flex',2013,'4KA S08rHN 09 2S6401','Sedan'),(4,'Hb20 1.2  turbo','Hyundai','MXD-1582','Locado','GNV',2012,'3Vu 18r4AL Ay f83029','Hatch'),(5,'Fussion','Ford','MUI-5125','Locado','GNV',2012,'2Al WH92Z1 6h LW8250','Esportivo'),(6,'Etios ','Toyota','HXJ-0082','Desativado','Gasolina',2013,'6xh 3hl7s8 G1 YA4527','Sedan'),(7,'Classic 1.5','Chevrolet','MQR-7628','Disponível','Flex',2015,'2t4 Af7le6 AT HF6915','Sedan'),(8,'Honda civic 2016','Honda','MSQ-0916','Disponível','Gasolina',2012,'8YL jp1PrD a9 ZK1789','Sedan'),(9,'Etios ','Toyota','MSD-0867','Locado','Gasolina',2009,'6kT s7yCAl Tr aA5114','Hatch'),(10,'Ká 1.0','Ford','MRP-7110','Locado','GNV',2018,'81C TYp3ak G5 5A2914','Hatch');
 /*!40000 ALTER TABLE `dim_veiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -210,4 +210,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-04 12:37:47
+-- Dump completed on 2021-12-04 13:32:28

@@ -303,7 +303,7 @@ CREATE TABLE `modeloveiculo` (
 
 LOCK TABLES `modeloveiculo` WRITE;
 /*!40000 ALTER TABLE `modeloveiculo` DISABLE KEYS */;
-INSERT INTO `modeloveiculo` VALUES (1,'Ká 1.0'),(2,'Fussion'),(3,'Honda civic 2016'),(4,'Honda civic 2021'),(5,'Classic 1.5'),(6,'Onix Sedan'),(7,'Etios Sedan'),(8,'Etios hatch'),(9,'Hb20 1.2 hatch'),(10,'Hb20 1.2 hatch turbo');
+INSERT INTO `modeloveiculo` VALUES (1,'Ká 1.0'),(2,'Fussion'),(3,'Honda civic 2016'),(4,'Honda civic 2021'),(5,'Classic 1.5'),(6,'Onix '),(7,'Etios '),(8,'Etios '),(9,'Hb20 1.2 '),(10,'Hb20 1.2  turbo');
 /*!40000 ALTER TABLE `modeloveiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -430,7 +430,7 @@ CREATE TABLE `tipoveiculo` (
 
 LOCK TABLES `tipoveiculo` WRITE;
 /*!40000 ALTER TABLE `tipoveiculo` DISABLE KEYS */;
-INSERT INTO `tipoveiculo` VALUES (1,'Sedã'),(2,'Caminhonete'),(3,'Esportivo');
+INSERT INTO `tipoveiculo` VALUES (1,'Sedan'),(2,'Caminhonete'),(3,'Esportivo'),(4,'Hatch');
 /*!40000 ALTER TABLE `tipoveiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -497,7 +497,7 @@ CREATE TABLE `veiculo` (
 
 LOCK TABLES `veiculo` WRITE;
 /*!40000 ALTER TABLE `veiculo` DISABLE KEYS */;
-INSERT INTO `veiculo` VALUES (1,'NAC-8873','4CR 2kFBBB DT Nc0116',2009,5,3,9,1,2),(2,'HOO-5563','14G BArSTu 6F aJ0832',1996,2,3,6,3,3),(3,'JNK-0402','4KA S08rHN 09 2S6401',2003,4,2,9,1,2),(4,'MXD-1582','3Vu 18r4AL Ay f83029',2002,4,1,10,3,1),(5,'MUI-5125','2Al WH92Z1 6h LW8250',2010,1,1,2,1,1),(6,'HXJ-0082','6xh 3hl7s8 G1 YA4527',1993,5,3,7,1,4),(7,'MQR-7628','2t4 Af7le6 AT HF6915',2015,2,2,5,1,2),(8,'MSQ-0916','8YL jp1PrD a9 ZK1789',2020,3,3,3,3,2),(9,'MSD-0867','6kT s7yCAl Tr aA5114',2003,5,3,8,2,1),(10,'MRP-7110','81C TYp3ak G5 5A2914',2018,1,1,1,1,1);
+INSERT INTO `veiculo` VALUES (1,'NAC-8873','4CR 2kFBBB DT Nc0116',2009,5,3,9,1,2),(2,'HOO-5563','14G BArSTu 6F aJ0832',2012,2,3,6,1,3),(3,'JNK-0402','4KA S08rHN 09 2S6401',2013,4,2,9,1,2),(4,'MXD-1582','3Vu 18r4AL Ay f83029',2012,4,1,10,4,1),(5,'MUI-5125','2Al WH92Z1 6h LW8250',2012,1,1,2,3,1),(6,'HXJ-0082','6xh 3hl7s8 G1 YA4527',2013,5,3,7,1,4),(7,'MQR-7628','2t4 Af7le6 AT HF6915',2015,2,2,5,1,2),(8,'MSQ-0916','8YL jp1PrD a9 ZK1789',2012,3,3,3,1,2),(9,'MSD-0867','6kT s7yCAl Tr aA5114',2009,5,3,8,4,1),(10,'MRP-7110','81C TYp3ak G5 5A2914',2018,1,1,1,4,1);
 /*!40000 ALTER TABLE `veiculo` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -510,4 +510,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-04 12:44:34
+-- Dump completed on 2021-12-04 13:32:56
