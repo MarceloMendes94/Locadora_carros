@@ -2,10 +2,10 @@
 
 [Especificações](./IN-Primeirotrabalho.pdf)  
 Alunos: 
-1. Anne Caroline  
+1. Anne Caroline Silva
 2. Marcelo P. Mendes 
 ## Trabalho
-Consiste em elaborar um data mart para uma locadora de veículos fictícia, construir um banco apartir de um modelo lógico que no contexto servirá de OLTP, Construir uma modelagem dimensional em estrela respeitando a ordem aprensentada pelo Kimball.
+Consiste em elaborar um data mart para uma locadora de veículos fictícia, construir um banco apartir de um modelo lógico que no contexto servirá de OLTP, Construir uma modelagem dimensional em estrela respeitando a ordem apresentada pelo Kimball.
 ### 1. Modelagem
 1. Definir a granularidade;
 2. Identificar as dimensões;
