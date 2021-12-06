@@ -241,16 +241,77 @@ CREATE TABLE dim_item_op (
 [DUMP do modelo Estrela](./DUMP_estrela_fisico.sql)
 
 ## Perguntas de negócio
-Qual o dia da semana em que há mais locações?  
-Tipo de veículo mais locado por dia da semana.  
-Quantidade de locação de cada item opcional para um determinado período de tempo.  
-Quais itens opcionais são mais locados por tipo de carro?  
-Qual a média de idade do cliente por modelo de carro?  
-Quantidade de clientes, por estado civil, que locam carros durante o fim de semana?  
-Há um aumento de locações durante o natal?  
-Qual a média de gasto em locação por idade?  
-Qual a média de gasto com itens opcionais por idade?  
-Qual a média de gasto com locação por estado civil?  
-Quantidade de clientes por UF (estado onde reside) em um determinado mês.  
-Quanto cada funcionário vendeu (considerando aluguel de opcionais e veículo) para um
-período informado?  
+### 1. Qual o dia da semana em que há mais locações? 
+```
+SELECT  dia_semana_escrito, count(dia_semana_escrito) as soma 
+FROM  fato
+INNER JOIN dim_data
+	on fato.DtInicio = dim_data.pk
+GROUP BY dia_semana_escrito
+ORDER BY soma DESC;
+```
+![Resultado query](./perguntas/img/001.png)
+
+### 2.Tipo de veículo mais locado por dia da semana.
+```
+SELECT dia_semana_escrito, max(Tipo)
+FROM fato
+INNER JOIN dim_data
+	on fato.DtInicio = dim_data.pk
+INNER JOIN dim_veiculo
+	on fato.dim_veiculo = dim_veiculo.pk
+GROUP BY dia_semana_escrito ;  
+```
+![Resultado query](./perguntas/img/002.png)  
+
+### 3.Quantidade de locação de cada item opcional para um determinado período de tempo.
+```
+SELECT item, count(item)
+FROM fato
+INNER JOIN dim_item_op
+	on dim_item_op.pk = fato.dim_item_opl
+GROUP BY item; 
+``` 
+![Resultado query](./perguntas/img/003.png)   
+### 4. Quais itens opcionais são mais locados por tipo de carro?  
+``` 
+```
+[]()
+### 5. Qual a média de idade do cliente por modelo de carro?
+```
+SELECT Modelo,avg(year(curdate())-year(DtNascimento)) as 'média idade'
+FROM fato
+INNER JOIN dim_cliente
+	on dim_cliente.pk = fato.dim_cliente
+INNER JOIN dim_veiculo
+	on dim_veiculo.pk = fato.dim_veiculo
+GROUP BY Modelo;
+```
+![Resultado query](./perguntas/img/005.png)  
+
+### 6. Quantidade de clientes, por estado civil, que locam carros durante o fim de semana?  
+### 7. Há um aumento de locações durante o natal?  
+
+### 8. Qual a média de gasto em locação por idade?  
+
+### 9. Qual a média de gasto com itens opcionais por idade?  
+
+### 10. Qual a média de gasto com locação por estado civil?
+```
+SELECT EstadoCivil, avg((DtFim-DtInicio)*VlrDiaria) as 'media gasta'
+FROM fato
+INNER JOIN dim_cliente
+	on fato.dim_cliente = dim_cliente.pk
+GROUP BY EstadoCivil; 
+```
+![Resultado query](./perguntas/img/010.png))
+### 11. Quantidade de clientes por UF (estado onde reside) em um determinado mês. 
+```
+SELECT UF, COUNT(UF)
+FROM fato
+INNER JOIN dim_cliente
+	on fato.dim_cliente = dim_cliente.pk
+GROUP BY UF; 
+``` 
+![Resultado query](./perguntas/img/011.png)
+### 12. Quanto cada funcionário vendeu (considerando aluguel de opcionais e veículo) para um período informado?  
