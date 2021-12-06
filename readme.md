@@ -293,7 +293,14 @@ GROUP BY Modelo;
 ### 7. Há um aumento de locações durante o natal?  
 
 ### 8. Qual a média de gasto em locação por idade?  
-
+```
+SELECT YEAR(curdate())-YEAR(DtNascimento) as 'idade', avg((DtFim-DtInicio)*VlrDiaria) as 'media gasta'
+FROM fato
+INNER JOIN dim_cliente
+	on dim_cliente.pk = fato.dim_cliente
+GROUP BY idade;   
+```
+![Resultado query](./perguntas/img/008.png)
 ### 9. Qual a média de gasto com itens opcionais por idade?  
 
 ### 10. Qual a média de gasto com locação por estado civil?
