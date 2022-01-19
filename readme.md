@@ -156,6 +156,7 @@ CREATE TABLE SituacaoVeiculo (
 ### Modelo Estrela físico  
   
 ```
+
 CREATE TABLE fato (
     pk INTEGER PRIMARY KEY,
     dim_cliente INTEGER,
@@ -206,15 +207,27 @@ CREATE TABLE dim_veiculo (
     Situacao VARCHAR(35),
     Combustivel VARCHAR(30),
     AnoFabricacao YEAR(4),
-    Chassi VARCHAR(20)
+    Chassi VARCHAR(20),
+    Tipo VARCHAR(45)
 );
 
-CREATE TABLE dim_item_op (
+CREATE TABLE grupo_bridge (
+    pk INTEGER PRIMARY KEY AUTO_INCREMENT
+);
+
+CREATE TABLE bridge_item_op (
+    /*pk INTEGER PRIMARY KEY AUTO_INCREMENT,*/
+    fk_item_op INTEGER,
+    fk_grupo INTEGER
+);
+
+CREATE TABLE item_opcional (
     pk INTEGER PRIMARY KEY,
     Item VARCHAR(45),
     VlrDiaria DECIMAL(10,2)
 );
 ```
+
 [Modelo estral Físico](./locadora_estrela_fisico.sql)
 
 ## Transformações no Pentaho
