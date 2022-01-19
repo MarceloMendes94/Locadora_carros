@@ -244,8 +244,9 @@ CREATE TABLE item_opcional (
 ![Dimensão Data](./pentaho/img/dim_data.png)
 
 ### Dimensão itemOpcional
+![Dimensão item Opcional](./pentaho/img/grupo.png)
+![Dimensão item Opcional](./pentaho/img/bridge.png)
 ![Dimensão item Opcional](./pentaho/img/dim_item_op.png)
-
 ### Tabela Fato
 ![Tabela Fato](./pentaho/img/tabela_fato.png)
 
