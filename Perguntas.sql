@@ -59,7 +59,12 @@ GROUP BY UF;
 
 
 
-
+/* */
+SELECT  *
+FROM  fato
+INNER JOIN grupo_bridge	on fato.dim_item_opl = grupo_bridge.pk
+INNER JOIN bridge_item_op on grupo_bridge.pk = bridge_item_op.fk_grupo
+INNER JOIN item_opcional on bridge_item_op.fk_item_op = item_opcional.pk;
 
 
 
