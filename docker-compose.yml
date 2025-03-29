@@ -1,0 +1,71 @@
+version: '3.8'
+
+services:
+  # Serviço MySQL
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password  # Senha do root do MySQL
+      MYSQL_DATABASE: mydb               # Nome do banco de dados
+      MYSQL_USER: user                   # Usuário
+      MYSQL_PASSWORD: user_password      # Senha do usuário
+    ports:
+      - "3306:3306"  # Mapeando a porta 3306 do contêiner para a 3306 do host
+    networks:
+      - backend
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/init.sql  # Copia o script SQL para o diretório de inicialização
+
+
+  # Serviço PHPMyAdmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin-container
+    environment:
+      PMA_HOST: mysql         # Nome do serviço MySQL
+      PMA_PORT: 3306          # Porta do MySQL
+      MYSQL_ROOT_PASSWORD: root_password # Senha do root do MySQL
+    ports:
+      - "8080:80"  # Mapeando a porta 8080 do host para a porta 80 do contêiner
+    networks:
+      - backend
+
+  # Serviço PostgreSQL
+  postgres:
+    image: postgres:latest
+    container_name: postgres-container
+    environment:
+      POSTGRES_PASSWORD: postgres_password # Senha do usuário postgres
+      POSTGRES_USER: postgres              # Nome do usuário postgres
+      POSTGRES_DB: mydb                    # Nome do banco de dados
+    ports:
+      - "5432:5432"  # Mapeando a porta 5432 do contêiner para a 5432 do host
+    networks:
+      - backend
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  # Serviço PGAdmin
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin-container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: postgres@pg.com  # E-mail de login do PGAdmin
+      PGADMIN_DEFAULT_PASSWORD: postgres_password # Senha de login do PGAdmin
+    ports:
+      - "5050:80"  # Mapeando a porta 5050 do host para a porta 80 do contêiner
+    networks:
+      - backend
+
+# Definição de volumes persistentes
+volumes:
+  mysql_data:
+  postgres_data:
+
+# Definindo as redes para os contêineres se comunicarem
+networks:
+  backend:
+    driver: bridge

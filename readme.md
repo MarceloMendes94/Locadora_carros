@@ -336,3 +336,13 @@ GROUP BY UF;
 ``` 
 ![Resultado query](./perguntas/img/011.png)
 ### 12. Quanto cada funcionário vendeu (considerando aluguel de opcionais e veículo) para um período informado?  
+
+
+
+
+## Como rodar
+
+```
+    docker-compose down -v
+    docker-compose up --build
+```
